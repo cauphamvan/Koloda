@@ -598,6 +598,10 @@ open class KolodaView: UIView, DraggableCardDelegate {
         currentCardIndex = index
     }
     
+    public func clearVisibleCards() {
+        visibleCards.removeAll()
+    }
+    
     public func reloadData() {
         guard let numberOfCards = dataSource?.kolodaNumberOfCards(self), numberOfCards > 0 else {
             countOfCards = 0
